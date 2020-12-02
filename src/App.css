@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap");
 body {
-  background-color: #fbfcfb;
+  background-color: #f7f5f2;
 }
 
 b {
@@ -11,8 +11,8 @@ b {
 
 .name {
   font-family: "Mulish", sans-serif;
-  color: #5e5bdd;
-  font-weight: 300;
+  color: #ff7259;
+  font-weight: 500;
   font-size: 100px;
   line-height: 110px;
   letter-spacing: 0.07em;
@@ -22,61 +22,103 @@ b {
 .links {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   padding-left: 25px;
   letter-spacing: 0.125em;
-  color: #f63f16;
+  color: #a588f5;
+  line-height: 150%;
+}
+
+a {
+  text-decoration: none;
+  color: #7368d8;
+}
+
+.text-links a {
+  -moz-transition: color 0.1s ease-in;
+  -o-transition: color 0.1s ease-in;
+  -webkit-transition: color 0.1s ease-in;
+}
+
+.link-icons svg {
+  -moz-transition: fill 0.1s ease-in;
+  -o-transition: fill 0.1s ease-in;
+  -webkit-transition: fill 0.1s ease-in;
+  margin-top: 10px;
+  padding-right: 5px;
+  fill: #7368d8;
+  margin-right: 10px;
+}
+
+.text-links a:hover {
+  color: #4b41a5;
+}
+.link-icons svg:hover {
+  fill: #4b41a5;
+}
+
+.links-container {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
 }
 
 .descrip {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
   color: #16154b;
-  /* text-align: justify; */
 }
 
-.cont {
-  width: 575px;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  left: 150px;
-  z-index: 10;
+.descrip a {
+  -moz-transition: color 0.1s ease-in;
+  -o-transition: color 0.1s ease-in;
+  -webkit-transition: color 0.1s ease-in;
+  -moz-transition: box-shadow 0.1s ease-in;
+  -o-transition: box-shadow 0.1s ease-in;
+  -webkit-transition: box-shadow 0.1s ease-in;
+  color: #057b90;
+  font-weight: 500;
+  border-bottom: 0px solid rgba(138, 138, 255, 0.26);
+  box-shadow: 0 -10px 0 rgba(138, 138, 255, 0.26) inset;
+}
+
+.descrip a:hover {
+  color: #035a69;
+  font-weight: 500;
+  border-bottom: 0px solid rgba(138, 138, 255, 0.26);
+  box-shadow: 0 -20px 0 rgba(138, 138, 255, 0.26) inset;
 }
 
 .large-circle {
-  margin-left: 525px;
+  margin-left: 625px;
   position: absolute;
-  top: 30%;
+  top: 15%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   height: 400px;
   width: 400px;
   border-radius: 50%;
-  background: linear-gradient(145deg, #cdd4df, #ffffff);
-  box-shadow: 27px 27px 46px #c2c5ce, -27px -27px 46px #ffffff;
+  background: linear-gradient(145deg, #ebe4dc, #fffffd);
 }
 .circle {
   position: absolute;
-  margin-left: 575px;
-  top: 30%;
+  margin-left: 675px;
+  top: 5%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   height: 300px;
   width: 300px;
   border-radius: 50%;
 
-  background: linear-gradient(145deg, #ffffff79, #f5f5f5);
-  box-shadow: 16px 16px 31px #d5d7df, -16px -16px 31px #ffffff;
+  fill: linear-gradient(145deg, #fdfcfaa4, #fdfcfa);
+  box-shadow: 16px 16px 31px #eee4d7, -16px -16px 31px #fdfcfa;
 }
 
 .circle-glow {
   position: absolute;
-  margin-left: 575px;
-  top: 30%;
+  margin-left: 675px;
+  top: 5%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   height: 300px;
@@ -89,6 +131,8 @@ b {
   -moz-transition: background-color 0.2s ease-in;
   -o-transition: background-color 0.2s ease-in;
   -webkit-transition: background-color 0.2s ease-in;
+  z-index: 4;
+  opacity: 60%;
 }
 
 .circle-glow:before {
@@ -102,7 +146,13 @@ b {
   background: radial-gradient(circle closest-side, #fff7b2e1, transparent);
   transform: translate(-50%, -50%);
   transition: width 0.2s ease, height 0.2s ease;
+  opacity: 60%;
 }
+
+.circle-glow:hover:before {
+  --size: 300px;
+}
+
 .circle-glow:hover {
   background-color: rgb(226, 211, 255);
 }
@@ -120,36 +170,191 @@ b {
   transition: width 0.3s ease, height 0.3s ease;
 }
 .circle-glow:hover:after {
-  --size: 400px;
+  --size: 500px;
 }
 
-.path1,
-.path2 {
-  position: fixed;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  z-index: -1;
+@media (min-width: 800px) {
+  .large-circle {
+    margin-left: 625px;
+    position: absolute;
+    top: 15%;
+  }
+  .circle {
+    position: absolute;
+    margin-left: 675px;
+    top: 15%;
+  }
+
+  .circle-glow {
+    position: absolute;
+    margin-left: 675px;
+    top: 15%;
+  }
+
+  .circle-glow:before {
+    position: absolute;
+  }
+
+  .circle-glow:after {
+    position: absolute;
+  }
+
+  .cont {
+    width: 650px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 150px;
+    z-index: 10;
+  }
+
+  img {
+    object-fit: cover;
+    display: block;
+  }
+
+  .path1,
+  .path2 {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .path1 {
+    right: 0%;
+    width: 96%;
+    top: -90%;
+    stroke-width: 0.1;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash1 5s linear forwards;
+    z-index: 10;
+  }
+
+  .path2 {
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+    animation: dash2 10s linear forwards;
+    left: -32%;
+    stroke-width: 0.1;
+    bottom: -50%;
+    z-index: -1;
+  }
+
+  .sticky {
+    position: absolute;
+    width: 150px;
+    margin-left: 1190px;
+    top: 33.5%;
+    z-index: 10;
+    height: 35px;
+    background: rgba(138, 138, 255, 0.26);
+    backdrop-filter: blur(3px);
+  }
+  .flowers {
+    width: 450px;
+    opacity: 85%;
+  }
+
+  .flowerbox {
+    position: absolute;
+    width: 450px;
+    margin-left: 950px;
+    top: 35%;
+    z-index: 9;
+    border-radius: 20px;
+    overflow: hidden;
+  }
 }
 
-.path1 {
-  right: 0%;
-  width: 96%;
-  top: -90%;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash1 5s linear forwards;
-}
+@media (max-width: 800px) {
+  .large-circle,
+  .circle,
+  .circle-glow {
+    z-index: -9;
+  }
+  .large-circle {
+    margin-left: -25px;
+    position: absolute;
+    top: 5%;
+  }
+  .circle {
+    position: absolute;
+    margin-left: 25px;
+    top: 5%;
+  }
 
-.path2 {
-  stroke-dashoffset: 1000;
-  stroke-dasharray: 1000;
-  animation: dash2 10s linear forwards;
-  left: -32%;
-  bottom: -50%;
+  .circle-glow {
+    position: absolute;
+    margin-left: 25px;
+    top: 5%;
+  }
+
+  .path1 {
+    position: absolute;
+    margin-left: 70px;
+    top: -45%;
+    stroke-width: 0.2px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash1 5s linear forwards;
+    z-index: -1;
+  }
+
+  .path2 {
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+    animation: dash2 10s linear forwards;
+    position: absolute;
+    margin-left: -400px;
+    stroke-width: 0.1px;
+    top: -20%;
+    z-index: -1;
+  }
+
+  .cont {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sticky {
+    position: absolute;
+    width: 150px;
+    top: -5%;
+    left: 50%;
+    z-index: 10;
+    height: 35px;
+    background: rgba(138, 138, 255, 0.26);
+    backdrop-filter: blur(3px);
+  }
+
+  .flowers {
+    width: 450px;
+    opacity: 85%;
+    z-index: -3;
+  }
+
+  .flowerbox {
+    width: 450px;
+    top: 35%;
+    z-index: -3;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 60px;
+  }
+
+  .photograph {
+    position: relative;
+    z-index: -3;
+  }
 }
 
 @keyframes dash1 {
@@ -215,7 +420,8 @@ b {
 
 .circle,
 .circle-glow,
-.large-circle {
+.large-circle,
+.photograph {
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
   -ms-animation: fadein 2s; /* Internet Explorer */
