@@ -132,7 +132,7 @@ a {
   -o-transition: background-color 0.2s ease-in;
   -webkit-transition: background-color 0.2s ease-in;
   z-index: 4;
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .circle-glow:before {
@@ -146,7 +146,7 @@ a {
   background: radial-gradient(circle closest-side, #fff7b2e1, transparent);
   transform: translate(-50%, -50%);
   transition: width 0.2s ease, height 0.2s ease;
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .circle-glow:hover:before {
@@ -259,7 +259,7 @@ a {
   }
   .flowers {
     width: 450px;
-    opacity: 85%;
+    opacity: 0.85;
   }
 
   .flowerbox {
@@ -337,7 +337,7 @@ a {
 
   .flowers {
     width: 450px;
-    opacity: 85%;
+    opacity: 0.85;
     z-index: -3;
   }
 
