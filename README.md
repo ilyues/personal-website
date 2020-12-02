@@ -1,1 +1,1 @@
-personal website live @ ilyues.me, made with react
+personal website live @ www.ilyues.me, made with react
